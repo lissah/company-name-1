@@ -3,7 +3,7 @@ var $mainNavUl = $('.main-nav ul');
 var $window = $(window);
 
 $navToggle.on('click', function() {
-$mainNavUl.toggle();
+$mainNavUl.slideToggle();
 $navToggle.toggleClass('active');
 });
 
