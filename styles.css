@@ -307,6 +307,70 @@ margin:0;
   background-color:transparent;
 }
 
+.nav-toggle {
+  width: 12px;
+  height: 16px;
+  margin: 16px auto;
+  position: relative;
+  box-sizing: border-box;
+  padding: 0;
+}
+
+a.nav-toggle {
+  display:none;
+}
+
+a.nav-toggle:hover {
+  background: transparent;
+}
+
+.nav-toggle:before, .nav-toggle:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.5s;
+}
+
+.nav-toggle:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+}
+
+.nav-toggle:after {
+  top: 11px;
+  height: 4px;
+  background: #fff;
+}
+
+.nav-toggle.active:before {
+    border: 0;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    transform: rotate(45deg);
+  }
+
+.nav-toggle.active:after {
+  border: 0;
+  top: 12px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  transform: rotate(-45deg);
+}
+
 
 .utility-nav {
   position: absolute;
@@ -542,7 +606,6 @@ header h1, header p {
   min-height: 60px;
 }
 
-
 .main-nav ul {
   padding: 1em 0;
   display: none;
@@ -552,76 +615,17 @@ header h1, header p {
   float: none;
 }
 
+a.nav-toggle {
+  display: block;
+}
+
 .copyright {
   margin-left: 2%;
   float: none;
   margin: 0 2%;
 }
 
-.nav-toggle {
-  width: 12px;
-  height: 16px;
-  margin: 16px auto;
-  position: relative;
-}
-a.nav-toggle {
-  display:block;
-}
 
-.nav-toggle.hover {
-  background: transparent;
-}
-
-.nav-toggle:before, .nav-toggle:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: all 0.5s;
-}
-
-.nav-toggle:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-top: 4px solid #fff;
-  border-bottom: 4px solid #fff;
-}
-
-.nav-toggle:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.nav-toggle.active:before {
-    border: 0;
-    top: 12px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #fff;
-    transform: rotate(45deg);
-  }
-
-.nav-toggle.active:after {
-  border: 0;
-  top: 12px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: #fff;
-  transform: rotate(-45deg);
-}
-}
 /* @FONT-FACE */
 @font-face {
     font-family: 'ChunkFive';
