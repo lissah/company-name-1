@@ -242,65 +242,7 @@ margin:0;
 }
 
 
-.main-nav {
-  background: #333;
-}
 
-.nav-toggle {
-  width: 12px;
-  height: 16px;
-  margin: 16px auto;
-  position: relative;
-}
-
-.nav-toggle:before, .nav-toggle:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height 100%;
-}
-
-.nav-toggle:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-top: 4px solid #fff;
-  border-bottom: 4px solid #fff;
-}
-
-.nav-toggle:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.nav-toggle.active:before {
-    border: 0;
-    top: 12px;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: #fff;
-    transform: rotate (45deg);
-  }
-
-.nav-toggle.active:after {
-  border: 0;
-  top: 12px;
-  left: 0;
-  width: 100%;
-  height: 4px;
-  background: #fff;
-  transform: rotate (-45deg);
-}
 
 
 
@@ -387,6 +329,11 @@ margin:0;
   font-size: .75em;
   text-decoration: underline;
 }
+
+.main-nav {
+  background: #333;
+}
+
 
 
 .scale-with-grid {
@@ -593,10 +540,15 @@ header h1, header p {
   display:none;
 }
 
-.main-nav ul {
-  padding: 1em 0;
+.main-nav {
+  min-height: 60px;
 }
 
+
+.main-nav ul {
+  padding: 1em 0;
+  display: none;
+}
 
 .main-nav li {
   float: none;
@@ -606,6 +558,69 @@ header h1, header p {
   margin-left: 2%;
   float:none;
   margin: 0 2%;
+}
+
+.nav-toggle {
+  width: 12px;
+  height: 16px;
+  margin: 16px auto;
+  position: relative;
+}
+a.nav-toggle {
+  display:block;
+}
+
+.nav-toggle.hover {
+  background: transparent;
+}
+
+.nav-toggle:before, .nav-toggle:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height 100%;
+}
+
+.nav-toggle:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-top: 4px solid #fff;
+  border-bottom: 4px solid #fff;
+}
+
+.nav-toggle:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.nav-toggle.active:before {
+    border: 0;
+    top: 12px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: #fff;
+    transform: rotate(45deg);
+  }
+
+.nav-toggle.active:after {
+  border: 0;
+  top: 12px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #fff;
+  transform: rotate(-45deg);
 }
 }
 /* @FONT-FACE */
